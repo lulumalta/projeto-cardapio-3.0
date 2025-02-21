@@ -2,6 +2,17 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 
+body {
+    --content: #1f1e1f;
+    --logo-h3: white;
+
+}
+.dark {
+    --content:white;
+     
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -31,7 +42,7 @@ html {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #1f1e1f;
+    background-color: var(--content);
     position: fixed;
     padding-left: 30rem;
 }
@@ -46,7 +57,7 @@ html {
 
 
 .logo h3 {
-   color: white;
+   color: var(--logo-h3);
    font-size: 1.6rem;
 
 }
@@ -69,7 +80,7 @@ html {
     padding-bottom: 2rem;
     padding-left: 1rem;
     padding-right: 1rem;
-    color: rgb(255, 255, 255);
+    color:var(--logo-h3);
     font-size: 1.8rem;
     text-transform: uppercase;
     font-weight: 500;

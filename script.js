@@ -1,3 +1,17 @@
+function botaodarkmode(){
+const TOGGLE = document.getElementById("toggle");
+const THEME = window.localStorage.getItem("theme");
+
+if (THEME === "dark") document.body.classList.add("light");
+TOGGLE.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+    if (THEME === "dark") {
+        window.localStorage.setItem("theme", "light");
+    } else window.localStorage.setItem("theme", "dark");
+    });
+}; 
+botaodarkmode();
+
 let show = true;
 const menuContent = document.querySelector('.content');
 const menuToggle = menuContent.querySelector('.menu-toggle');
