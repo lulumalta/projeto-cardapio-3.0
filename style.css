@@ -515,4 +515,24 @@ footer {
 
     
 }
+/* * {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    background-color: #fafafa;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    height: 100vh;
+    margin: 0;
+    transition: background 0.2s linear;
 
+}
+body.dark{
+    background: #232c35;
+
+} */
