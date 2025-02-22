@@ -1,0 +1,12 @@
+subir arquivoo primeira pessoa
+TUDO NO TERMINAL 
+git add .
+git commit -m ""
+git push origin master
+
+
+segunda pessoa
+git pull origin master
+git add .
+git commit -m ""
+git push origin master
