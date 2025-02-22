@@ -26,57 +26,64 @@ menuToggle.addEventListener('click', () => {
 })
 
 
-var listaProdutos = [
-    // {} chave/nomeVariavel: valor
-    { img: "smartv.png", titulo: "tv", descricao: "tv 50 polegas, samsung smartv luz de led", preco: 2000 },
-    { img: "smartv.png", titulo: "tv led", descricao: "tv 40 polegas, samsung smartv luz de led", preco: 1500 },
-    { img: "smartv.png", titulo: "tv sobre", descricao: "tv 20 polegas, samsung smartv luz de led", preco: 1000 }
-]
 
-var listaCarrinho = [];
+// Array para armazenar os itens do carrinho
+let carrinho = [];
 
-function exibirCarrinho(){
-    for (var i = 0; i < listaCarrinho.length; i++) {
-        // armazenando a TAG HTML <div id="carrinho"></div> dentro de uma variavel
-        // id = identificador (CPF)
-        var ulListaCarrinho = document.getElementById("carrinho");
-
-        // innerHTML -> propriedade que EDITA O HTML
-        // += -> sua funcionalidade é criar um novo item <li> ao inves de substituir o anterior
-        ulListaCarrinho.innerHTML += `<li>
-                                        <p>${listaCarrinho[i].titulo}</p>
-                                        <p style="color: green"> ${listaCarrinho[i].preco}</p>
-                                      </li>
-                                    `;
-    }
-}
-
-
-function addCarrinho(index){
-    // buscando UM elemento dentro do array pela sua POSICAO
-    // listaProdutos[index]
+// Função para adicionar um produto ao carrinho
+function adicionarAoCarrinho(nome, preco) {
+    // Cria um objeto do item
+    const item = { nome, preco };
     
-    // push -> adiciona um elemento no final do array
-    listaCarrinho.push(listaProdutos[index]);
-    exibirCarrinho();
- }
-
- function exibirLista() {
-    for (var i = 0; i < listaProdutos.length; i++) {
-        // armazenando a TAG HTML <div id="lista"></div> dentro de uma variavel
-        // id = identificador (CPF)
-        var ulListaProdutos = document.getElementById("lista");
-
-        // innerHTML -> propriedade que EDITA O HTML
-        // += -> sua funcionalidade é criar um novo item <li> ao inves de substituir o anterior
-        ulListaProdutos.innerHTML += `<li>
-                                        <img src="${listaProdutos[i].img}">    
-                                        <h1>${listaProdutos[i].titulo}</h1>
-                                        <p>${listaProdutos[i].descricao} </p>
-                                        <p style="color: gray; text-decoration: line-through;"> ${listaProdutos[i].preco * 2}</p>
-                                        <p style="color: green"> ${listaProdutos[i].preco}</p>
-                                        <button onclick="addCarrinho(${i})" style="background-color: green; color: white; border-radius: 5px; padding: 10px">adicionar ao carrinho</button>
-                                      </li>
-                                    `
-    }
+    // Adiciona o item no array do carrinho
+    carrinho.push(item);
+    
+    // Atualiza a exibição do carrinho
+    atualizarCarrinho();
 }
+
+// Função para atualizar a exibição do carrinho
+function atualizarCarrinho() {
+    const carrinhoElement = document.getElementById("carrinho");
+    const totalElement = document.getElementById("total");
+    const cartCount = document.getElementById("cartCount");
+
+    // Limpa a lista do carrinho
+    carrinhoElement.innerHTML = "";
+
+    // Adiciona cada item do carrinho à lista
+    let total = 0;
+    carrinho.forEach((item) => {
+        const li = document.createElement("li");
+        li.textContent = `${item.nome} - R$ ${item.preco.toFixed(2)}`;
+        carrinhoElement.appendChild(li);
+        total += item.preco;
+    });
+
+    // Atualiza o total
+    totalElement.textContent = `Total: R$ ${total.toFixed(2)}`;
+
+    // Atualiza a quantidade de itens no carrinho
+    cartCount.textContent = carrinho.length;
+}
+
+// Exibe o carrinho quando o ícone de carrinho for clicado
+document.getElementById("openCart").addEventListener("click", function () {
+    const carrinhoModal = document.getElementById("carrinhoModal");
+    carrinhoModal.style.display = "block";
+});
+
+// Função para fechar o carrinho
+function fecharCarrinho() {
+    const carrinhoModal = document.getElementById("carrinhoModal");
+    carrinhoModal.style.display = "none";
+}
+
+// Adiciona evento para os botões de "pedir agora"
+document.querySelectorAll(".pedir").forEach(botao => {
+    botao.addEventListener("click", () => {
+        const nome = botao.getAttribute("data-nome");
+        const preco = parseFloat(botao.getAttribute("data-preco"));
+        adicionarAoCarrinho(nome, preco);
+    });
+});
