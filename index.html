@@ -2,58 +2,68 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <!-- Define o conjunto de caracteres para suportar acentuação e caracteres especiais -->
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Garante compatibilidade com versões antigas do Internet Explorer -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Torna o site responsivo em diferentes dispositivos -->
+
     <link rel="stylesheet" href="style.css">
+    <!-- Importa o arquivo CSS externo para estilização -->
+
     <script src="https://kit.fontawesome.com/3df637a2f2.js" crossorigin="anonymous"></script>
-    <!-- <script src="https://fontawesome.com/icons?t=packs" crossorigin="anonymous"></script> -->
+    <!-- Inclui a biblioteca de ícones Font Awesome -->
+
     <title>Paiol Burguer | Romulo do Carmo</title>
+    <!-- Define o título da aba do navegador -->
 </head>
 <body>
     <header>
-        <!-- luisa  -->
-            <div class="content">
-                <button id="toggle" class="button"> Clique aqui para alterar</button>
-                <div class="logo">
-                    
-                    <img src="logo paiol.jpg" alt="Cupcake">
-                    <h3>Paiol Burguer</h3>
-                </div>
-                <ul class="list-menu">
-                    
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#sobrenos">Sobre nós</a></li>
-                    <li><a href="#cardapio">Cardápio</a></li>
-                    <li><a href="#contatos">Contatos</a></li>
-                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="#" id="openCart"><i class="fas fa-shopping-cart"></i>(<span id="cartCount">0</span>)</a></li>
-
-                </ul>
-
-                <div class="menu-toggle">
-                    <div class="one"></div>
-                    <div class="two"></div>
-                    <div class="three"></div>
-                </div>
-
+        <div class="content">
+            <!-- Botão para alternar entre modo claro e escuro -->
+            <button id="toggle" class="button" aria-label="Alternar Modo Escuro">Modo Escuro</button>
+            
+            <div class="logo">
+                <img src="logo paiol.jpg" alt="Logo Paiol Burguer">
+                <!-- Exibe a logo da hamburgueria -->
+                <h3>Paiol Burguer</h3>
+                <!-- Nome da hamburgueria -->
             </div>
-            <div>
-              <button   onclick="exibirLista()" style="background-color: green; color: white; border-radius: 5px; padding: 10px">exibir produtos< <id="openCart">🛒 Carrinho (<span id="cartCount">0</span>)</button>
-                <ul id="lista">
-               </ul>
-               <ul id="carrinho"> </ul>
-            </div>
+            
+            <ul class="list-menu">
+                <!-- Menu de navegação com links para as seções da página -->
+                <li><a href="#home">Home</a></li>
+                <li><a href="#sobrenos">Sobre nós</a></li>
+                <li><a href="#cardapio">Cardápio</a></li>
+                <li><a href="#contatos">Contatos</a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <!-- Link para o Instagram com ícone -->
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <!-- Link para o Facebook com ícone -->
+                <li><a href="#" id="openCart">
+                    <i class="fas fa-shopping-cart"></i>(<span id="cartCount">0</span>)
+                    <!-- Ícone do carrinho de compras com contador de itens -->
+                </a></li>
+            </ul>
+        </div>
     </header>
 
     <section class="first-section" id="home">
-        
         <div class="conteudo-principal">
             <h1>Deixe seu dia mais saboroso!!!</h1>
+            <!-- Slogan principal -->
+
             <h2>Os sanduíches mais gostosos da Região</h2>
+            <!-- Subtítulo promocional -->
+
             <div class="btn">
                 <button class="reservar">Fale conosco!</button>
+                <!-- Botão para contato -->
+
                 <button class="montar">Peça o seu!</button>
+                <!-- Botão para realizar pedidos -->
             </div>
         </div>    
     </section>    
@@ -62,99 +72,106 @@
         <div class="main">
             <div class="contentsobre">
                 <h2>Sobre nós</h2>
-                <p>Há muitos anos, surgiu o sonho de abrir um restaurante delivery, que se concretizou em 2024, com o apoio incondicional da minha família. Isso só foi possível graças ao nosso trabalho conjunto. Com o empenho de todos na nossa cozinha, na nossa central de atendimentos via WhatsApp e nos entregadores, conseguimos levar até você os sanduíches mais saborosos, preparados com técnica e atenção. Priorizamos sempre a experiência do cliente e a sua satisfação antes, durante e após a entrega do seu lanche. Agradecemos a sua preferência! </p>
+                <!-- Título da seção de informações sobre a empresa -->
+
+                <p>Há muitos anos, surgiu o sonho de abrir um restaurante delivery...</p>
+                <!-- Descrição da história da hamburgueria -->
             </div>     
             <div class="img-cozinha">
-                <img src="logo paiol.jpg" alt="">
+                <img src="logo paiol.jpg" alt="Imagem da Cozinha">
+                <!-- Imagem ilustrativa da cozinha ou ambiente da empresa -->
             </div>
         </div>    
     </section>
 
     <section class="cardapio" id="cardapio">
         <h2>Cardápio</h2>
+        <!-- Título da seção de cardápio -->
 
-            <div class="itens-cardapio">
-                
-                <div class="X-Paiol Especial">
-                    <img src="fotos/esspecial.JPG" alt="">
-                    <div class="info">
-                        <h3>X-PAIOL ESPECIAL</h3>
-                        <h4> Pão, blend de carne bovina(150g), queijo prato, fatias de bacon, cebola roxa caramelizada, abacaxi tostado, tomate, alface e molho barbecue. <span>R$30,00</span></h4>
-                        <button class="pedir">pedir agora>
-                    </div>   
-                </div>
-                
-                <div class="x-Egg Bacon">
-                    <img src="fotos/x bacon.JPG" alt="x-Egg Bacon">
-                    <div class="info">
-                        <h3>x-Egg Bacon</h3>
-                        <h4>Pão, blend bovino(100g), ovo, bacon, queijo prato, presunto, alface, tomate.<span>R$24,00</span></h4>
-                        <button class="pedir">pedir agora</button>
-                    </div> 
-                
-                </div>
-                
-                <div class="X-Egg Burguer">
-                    <img src="fotos/x paiol espe.JPG" alt="portuguesa">
-                    <div class="info">
-                        <h3>X-Egg Burguer</h3>
-                        <h4>Pão, carne comum, ovo, queijo mussarela, presunto, alface, tomate, milho, batata palha. <span>R$20,00</span></h4>
-                        <button class="pedir">pedir agora</button>
-                    </div> 
-                
-                </div>
-                
-                
-                
+        <div class="itens-cardapio">
+            <!-- Lista de itens disponíveis para pedido -->
+
+            <div class="item">
+                <img src="image/326b8f2c-50d5-47df-8ed5-78b605fdfa33.JPG" alt="X-Paiol Especial">
+                <!-- Imagem do lanche -->
+
+                <div class="info">
+                    <h3>X-PAIOL ESPECIAL</h3>
+                    <!-- Nome do produto -->
+
+                    <h4>Pão, blend de carne bovina (150g)... <span>R$30,00</span></h4>
+                    <!-- Descrição e preço -->
+
+                    <button class="pedir">Pedir agora</button>
+                    <!-- Botão para adicionar ao carrinho -->
+                </div>   
             </div>
 
-    </section>
-
-    <!-- Carrinho de Compras Modal -->
-    <div id="carrinhoModal" style="display: none; text-align: center;">
-        <h3>Carrinho de Compras</h3>
-        <ul id="carrinho"></ul>
-        <p id="total">Total: R$ 0,00</p>
-        <button onclick="fecharCarrinho()">Fechar Carrinho</button>
-    </div>
-
-    <section class="contatos" id="contatos">
-        <h3>Contatos</h3>
-        <div class="contatos-secao">
-            <div>
-                <i class="fas fa-phone"></i>
-                <span>(31) 98434-2559</span>
+            <div class="item">
+                <img src="image/6c55a0ae-fefc-4c0c-926e-9e03ec1d4f1b.JPG" alt="X-Egg Bacon">
+                <div class="info">
+                    <h3>X-EGG BACON</h3>
+                    <h4>Pão, blend bovino (100g), ovo, bacon... <span>R$24,00</span></h4>
+                    <button class="pedir">Pedir agora</button>
+                </div> 
             </div>
-            <div>
-                <i class="fab fa-instagram"></i>
-                <span>@paiol_burguer_</span>
+
+            <div class="item">
+                <img src="image/846bde91-4751-4f1c-af93-921af3256bac.JPG" alt="X-Egg Burguer">
+                <div class="info">
+                    <h3>X-EGG BURGUER</h3>
+                    <h4>Pão, carne comum, ovo, queijo... <span>R$20,00</span></h4>
+                    <button class="pedir">Pedir agora</button>
+                </div> 
             </div>
+
+            
             
         </div>
     </section>
 
-    
-     
+    <!-- Modal do Carrinho -->
+    <div id="carrinhoModal" style="display: none; text-align: center;">
+        <h3>Carrinho de Compras</h3>
+        <!-- Título da janela do carrinho -->
 
-   
+        <ul id="carrinho"></ul>
+        <!-- Lista dinâmica de itens adicionados ao carrinho -->
 
-   
+        <p id="total">Total: R$ 0,00</p>
+        <!-- Exibe o valor total dos itens -->
 
-    
-   </body>
-    
+        <button onclick="fecharCarrinho()">Fechar Carrinho</button>
+        <!-- Botão para fechar o modal do carrinho -->
+    </div>
 
-     
-    
+    <section class="contatos" id="contatos">
+        <h3>Contatos</h3>
+        <!-- Título da seção de contatos -->
 
-
-
-   
+        <div class="contatos-secao">
+            <div>
+                <i class="fas fa-phone"></i>
+                <!-- Ícone de telefone -->
+                <span>(31) 98434-2559</span>
+                <!-- Número de telefone -->
+            </div>
+            <div>
+                <i class="fab fa-instagram"></i>
+                <!-- Ícone do Instagram -->
+                <span>@paiol_burguer_</span>
+                <!-- Nome de usuário no Instagram -->
+            </div>
+        </div>
+    </section>
 
     <footer>
         <h4>Desenvolvido por -> Luisa Malta, João Vitor, Iasmyn Patricia e Carlos Eduardo.</h4>
+        <!-- Créditos dos desenvolvedores -->
     </footer>
 
-    <script src="./script.js"></script>
+    <!-- Script do modo escuro -->
+    <script src="modesc.js"></script>
+    <!-- Importa o script responsável pela funcionalidade de alternância de tema -->
 </body>
 </html>

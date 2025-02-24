@@ -14,8 +14,63 @@ body {
     --logo-h3:var(--content)
     var(--sobre-nos):color black;
     --cardapio:var(white);
+    
 
      
+}
+
+/* Define o modo claro como padrão */
+:root {
+    --cor-fundo: #ffffff;
+    --cor-texto: #000000;
+    --cor-header: #f8f8f8;
+    --cor-botao: #333;
+    --cor-botao-texto: #fff;
+}
+
+/* Define as cores para o modo escuro */
+.dark {
+    --cor-fundo: #121212;
+    --cor-texto: #ffffff;
+    --cor-header: #1e1e1e;
+    --cor-botao: #ffcc00;
+    --cor-botao-texto: #000;
+}
+
+/* Aplicação global das cores */
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Ajusta a cor do cabeçalho */
+header {
+    background-color: var(--cor-header);
+    color: var(--cor-texto);
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Ajusta os links do menu */
+.list-menu a {
+    color: var(--cor-texto);
+}
+
+/* Ajuste do botão de modo escuro */
+.button {
+    background-color: var(--cor-botao);
+    color: var(--cor-botao-texto);
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Ajusta o botão no modo escuro */
+.dark .button {
+    background-color: var(--cor-botao);
+    color: var(--cor-botao-texto);
 }
 
 
@@ -104,7 +159,7 @@ html {
 .first-section{
     height: 100vh;
     width: 100vw;
-    background-image: linear-gradient(rgba(29, 29, 29, 0.8), rgba(29, 29, 29, 0.8)), url(Hambúrguer\ x-tudo\ burguer\ story\ de\ instagram.png.PNG);
+    background-image: linear-gradient(rgba(29, 29, 29, 0.8), rgba(29, 29, 29, 0.8)), url(image/Hamburguer_x-tudo_burguer_story_de_instagram.png.PNG);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
