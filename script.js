@@ -20,3 +20,32 @@ function botaodarkmode() {
 
 // Chama a função ao carregar o script
 botaodarkmode();
+
+let botoesPedir = document.querySelectorAll(".pedir");
+
+let carrinhoLista = document.querySelector("#carrinho");
+
+let contagemProdutos = document.querySelectorAll("#cartCount");
+
+let valor = document.querySelector("#total");
+
+let openCart = document.querySelector("#openCart");
+
+let carrinhoModal = document.querySelector("#carrinhoModal");
+
+let carrinho = [];
+
+openCart.addEventListener("click", () => {
+    if (carrinhoModal.style.display === "flex") {
+        carrinhoModal.style.display = "none";
+    } else {
+        carrinhoModal.style.display = "flex";
+    }
+});
+function fecharCarrinho() {
+    carrinhoModal.style.display = "none";
+}
+
+botoesPedir.addEventListener("click", function(){
+    
+})

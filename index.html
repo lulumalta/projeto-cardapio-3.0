@@ -42,10 +42,24 @@
                 <!-- Link para o Instagram com ícone -->
                 <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                 <!-- Link para o Facebook com ícone -->
-                <li><a href="#" id="openCart">
+                <li><a href="carrinhoModal" id="openCart">
                     <i class="fas fa-shopping-cart"></i>(<span id="cartCount">0</span>)
                     <!-- Ícone do carrinho de compras com contador de itens -->
                 </a></li>
+                
+    <div id="carrinhoModal" >
+        <h3>Carrinho de Compras</h3>
+        <!-- Título da janela do carrinho -->
+
+        <ul id="carrinho"></ul>
+        <!-- Lista dinâmica de itens adicionados ao carrinho -->
+
+        <p id="total">Total: R$ 0,00</p>
+        <!-- Exibe o valor total dos itens -->
+
+        <button onclick="fecharCarrinho()">Fechar Carrinho</button>
+        <!-- Botão para fechar o modal do carrinho -->
+    </div>
             </ul>
         </div>
     </header>
@@ -130,20 +144,7 @@
         </div>
     </section>
 
-    <!-- Modal do Carrinho -->
-    <div id="carrinhoModal" style="display: none; text-align: center;">
-        <h3>Carrinho de Compras</h3>
-        <!-- Título da janela do carrinho -->
-
-        <ul id="carrinho"></ul>
-        <!-- Lista dinâmica de itens adicionados ao carrinho -->
-
-        <p id="total">Total: R$ 0,00</p>
-        <!-- Exibe o valor total dos itens -->
-
-        <button onclick="fecharCarrinho()">Fechar Carrinho</button>
-        <!-- Botão para fechar o modal do carrinho -->
-    </div>
+    
 
     <section class="contatos" id="contatos">
         <h3>Contatos</h3>
