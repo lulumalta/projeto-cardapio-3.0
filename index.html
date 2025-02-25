@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -42,24 +43,10 @@
                 <!-- Link para o Instagram com ícone -->
                 <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                 <!-- Link para o Facebook com ícone -->
-                <li><a href="carrinhoModal" id="openCart">
+                <li><a id="openCart">
                     <i class="fas fa-shopping-cart"></i>(<span id="cartCount">0</span>)
                     <!-- Ícone do carrinho de compras com contador de itens -->
                 </a></li>
-                
-    <div id="carrinhoModal" >
-        <h3>Carrinho de Compras</h3>
-        <!-- Título da janela do carrinho -->
-
-        <ul id="carrinho"></ul>
-        <!-- Lista dinâmica de itens adicionados ao carrinho -->
-
-        <p id="total">Total: R$ 0,00</p>
-        <!-- Exibe o valor total dos itens -->
-
-        <button onclick="fecharCarrinho()">Fechar Carrinho</button>
-        <!-- Botão para fechar o modal do carrinho -->
-    </div>
             </ul>
         </div>
     </header>
@@ -99,14 +86,14 @@
     </section>
 
     <section class="cardapio" id="cardapio">
-        <h2>Cardápio</h2>
+
         <!-- Título da seção de cardápio -->
 
         <div class="itens-cardapio">
             <!-- Lista de itens disponíveis para pedido -->
-
+            <h2>Cardápio</h2>
             <div class="item">
-                <img src="image/326b8f2c-50d5-47df-8ed5-78b605fdfa33.JPG" alt="X-Paiol Especial">
+                <img src="fotos/x paiol espe.JPG" alt="X-Paiol Especial">
                 <!-- Imagem do lanche -->
 
                 <div class="info">
@@ -122,7 +109,7 @@
             </div>
 
             <div class="item">
-                <img src="image/6c55a0ae-fefc-4c0c-926e-9e03ec1d4f1b.JPG" alt="X-Egg Bacon">
+                <img src="fotos/x bacon.JPG" alt="X-Egg Bacon">
                 <div class="info">
                     <h3>X-EGG BACON</h3>
                     <h4>Pão, blend bovino (100g), ovo, bacon... <span>R$24,00</span></h4>
@@ -131,20 +118,31 @@
             </div>
 
             <div class="item">
-                <img src="image/846bde91-4751-4f1c-af93-921af3256bac.JPG" alt="X-Egg Burguer">
+                <img src="fotos/esspecial.JPG" alt="X-Egg Burguer">
                 <div class="info">
                     <h3>X-EGG BURGUER</h3>
                     <h4>Pão, carne comum, ovo, queijo... <span>R$20,00</span></h4>
                     <button class="pedir">Pedir agora</button>
                 </div> 
-            </div>
-
-            
-            
+            </div>        
+        </div>
+        <div id="carrinhoModal" style="display: none; text-align: center;">
+            <h3>Carrinho de Compras</h3>
+            <!-- Título da janela do carrinho -->
+    
+            <ul id="carrinho"></ul>
+            <!-- Lista dinâmica de itens adicionados ao carrinho -->
+    
+            <p id="total">Total: R$ 0,00</p>
+            <!-- Exibe o valor total dos itens -->
+    
+            <button onclick="fecharCarrinho()">Fechar Carrinho</button>
+            <!-- Botão para fechar o modal do carrinho -->
         </div>
     </section>
 
-    
+    <!-- Modal do Carrinho -->
+
 
     <section class="contatos" id="contatos">
         <h3>Contatos</h3>
