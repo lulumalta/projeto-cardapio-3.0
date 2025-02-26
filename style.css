@@ -330,8 +330,21 @@ html {
 /* estilizar id carrinho modal */
 #carrinhoModal{
     
-    
+    width: 200px;
+     max-width: 90%; 
+     background:  #ffc506; 
+     border-radius: 10px; 
+     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+     padding: 20px; 
+     font-family: uppercase; 
+     margin: auto;
+     color: #000;
+     line-height: 25px;
 }
+
+
+
+
 
 /* Sobre nós */
 
